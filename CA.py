@@ -1,7 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 import cv2
-#Izgara zemin oluşturur.
+
 class CA_Grid:
     def __init__(self, height=200, width=400, initial_number_of_black_cell=1):
         self.height = height
@@ -23,7 +23,7 @@ class CA_Grid:
             self.__multiple_black_cell_grid()
 
         return self.grid
-    #Yükseklik x genişlik ölçülerine göre bir matris oluşturur ve matrisin üst satırında ortadaki hücreye 1 atar.
+
     def __single_black_cell_grid(self):
         self.grid = np.zeros((self.height, self.width), dtype=np.int32)
         self.grid[0, int(self.width / 2)] = 1
